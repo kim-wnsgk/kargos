@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+}
+
+.contents {
+    display: flex;
+}
+
+.title {
+    flex: 5;
+    padding: 20px;
+    line-height: 50px;
+}
+
+.mainTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.icons {
+    flex: 3;
+    display: flex;
+}
+
+.icons>input {
+    background-color: rgb(245, 245, 245);
+    border: 0;
+    height: 40px;
+    width: 400px;
+    border-radius: 28px;
+    padding: 10px;
+    margin: 45px;
+}
+
+.alert {
+    color: rgb(83, 83, 83);
+    margin-top: 35px;
+}

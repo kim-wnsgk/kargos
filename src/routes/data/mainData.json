@@ -1,0 +1,18 @@
+{
+    "kubernetes_version": "v1.20.1",
+    "total_nodes": 3,
+    "created": "0001-01-01T00:00:00Z",
+    "Tabs": {
+        "DaemonSets": 2,
+        "Deployments": 10,
+        "Ingresses": 1,
+        "Jobs": 3,
+        "Namespaces": 8,
+        "PersistentVolume": 1,
+        "Pods": 25,
+        "Services": 12,
+        "TotalResources": 62
+    },
+    "top_namespaces": null,
+    "alert_count": 0
+}

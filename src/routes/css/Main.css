@@ -1,0 +1,26 @@
+.container-fixed {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(236, 236, 236);
+    overflow: hidden;
+}
+
+.menuBanner-fixed {
+    display: inline-block;
+    /* 추후에 껐다켰다 할수 있도록 */
+    float: left;
+    height: 100%;
+}
+
+.contents-fixed {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .button {
+    position: absolute;
+    left: 250px;
+    bottom: 50px;
+    background-color: aqua;
+} */

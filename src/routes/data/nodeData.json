@@ -1,0 +1,32 @@
+[
+    {
+        "name": "k8s-node1",
+        "cpu_usage": 2,
+        "ram_usage": 33,
+        "disk_usage": 0,
+        "ip": "172.25.235.99",
+        "ready": "",
+        "os_image": "",
+        "pods": null
+    },
+    {
+        "name": "k8s-node2",
+        "cpu_usage": 4,
+        "ram_usage": 29,
+        "disk_usage": 0,
+        "ip": "172.25.235.116",
+        "ready": "",
+        "os_image": "",
+        "pods": null
+    },
+    {
+        "name": "master.hwan.com",
+        "cpu_usage": 7,
+        "ram_usage": 30,
+        "disk_usage": 0,
+        "ip": "172.25.235.126",
+        "ready": "",
+        "os_image": "",
+        "pods": null
+    }
+]

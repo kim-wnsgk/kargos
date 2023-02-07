@@ -1,0 +1,17 @@
+[
+    {
+        "tag": "severe",
+        "message": "Node Node-3 was disconnected at xx:xx : some reason",
+        "id": "151c95cd-a226-404d-b134-3ca76a175e3a"
+    },
+    {
+        "tag": "severe",
+        "message": "Node Node-3 is running low on memory",
+        "id": "c3e1601e-982b-4cb3-95a6-d8976aba9c05"
+    },
+    {
+        "tag": "warning",
+        "message": "Pod Nginx-pod restarted at xx:xx : Out of Memory",
+        "id": "8355c8db-0bb0-4281-8169-0ae289b1d9fd"
+    }
+]
