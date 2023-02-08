@@ -19,6 +19,11 @@
     font-weight: bold;
 }
 
+.subTitle {
+    color: rgb(160, 160, 160);
+    font-weight: bold;
+}
+
 .icons {
     flex: 3;
     display: flex;

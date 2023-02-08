@@ -4,6 +4,9 @@ import './css/Main.css'
 import styles from './css/Nodes.module.css'
 
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import { GrFormNext } from "react-icons/gr"
 
 import jsonData from './data/nodeData.json'
 
@@ -32,7 +35,7 @@ function Nodes() {
     return (
         <div class="container-fixed">
             <div className='menuBanner-fixed'>
-                <MenuBanner selected={["Alerts"]} />
+                <MenuBanner selected={["Nodes"]} />
             </div>
             <div className='contents-fixed'>
                 <div className='topBanner-fixed'>
@@ -54,14 +57,14 @@ function Nodes() {
                                 <div className={styles.ram}>{node.ram_usage}</div>
                                 <div className={styles.disk}>{node.disk_usage}</div>
                                 <div className={styles.ip}>{node.ip}</div>
-                                >
+                                <Link to={`/nodes/detail/${node.name}`} className={styles.toDetail}><GrFormNext /></Link>
+
                             </div>
                         ))}
                     </div>
 
                 </div>
             </div>
-            main
         </div>
     );
 }

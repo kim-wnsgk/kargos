@@ -1,0 +1,42 @@
+[
+    {
+        "name": "nginx",
+        "namespace": "front",
+        "images": "nginx/nginx:latest",
+        "status": "running",
+        "label": "test",
+        "created": "24s"
+    },
+    {
+        "name": "nginx2",
+        "namespace": "front",
+        "images": "nginx/nginx:latest",
+        "status": "running",
+        "label": "test",
+        "created": "53s"
+    },
+    {
+        "name": "nginx3",
+        "namespace": "backend",
+        "images": "nginx/nginx:latest",
+        "status": "running",
+        "label": "test",
+        "created": "10s"
+    },
+    {
+        "name": "nginx4",
+        "namespace": "backend",
+        "images": "nginx/nginx:latest",
+        "status": "running",
+        "label": "test",
+        "created": "25s"
+    },
+    {
+        "name": "nginx5",
+        "namespace": "backend",
+        "images": "nginx/nginx:latest",
+        "status": "running",
+        "label": "test",
+        "created": "35s"
+    }
+]

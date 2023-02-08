@@ -1,0 +1,42 @@
+[
+    {
+        "name": "nginx",
+        "namespace": "front",
+        "pod_ip": "10.0.20.1",
+        "status": "running",
+        "service_connected": "true",
+        "restarts": 3
+    },
+    {
+        "name": "nginx2",
+        "namespace": "backend",
+        "pod_ip": "10.0.20.1",
+        "status": "running",
+        "service_connected": "true",
+        "restarts": 2
+    },
+    {
+        "name": "nginx3",
+        "namespace": "front",
+        "pod_ip": "10.0.20.1",
+        "status": "running",
+        "service_connected": "true",
+        "restarts": 1
+    },
+    {
+        "name": "nginx4",
+        "namespace": "backend",
+        "pod_ip": "10.0.20.1",
+        "status": "running",
+        "service_connected": "true",
+        "restarts": 3
+    },
+    {
+        "name": "nginx5",
+        "namespace": "front",
+        "pod_ip": "10.0.20.1",
+        "status": "running",
+        "service_connected": "true",
+        "restarts": 5
+    }
+]

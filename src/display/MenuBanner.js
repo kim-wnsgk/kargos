@@ -34,9 +34,9 @@ function MenuBanner(props) {
                     <li>
                         <div>Controller</div>
                         <ul className={styles.smallMenu}>
-                            <li>Replicaset</li>
-                            <li>Deployment</li>
+                            <li><Link to='/controllers/deployments' className={styles.link}>Deployment</Link></li>
                             <li>Ingress</li>
+                            <li>DemonSets</li>
                         </ul>
                     </li>
                     <li>
@@ -44,9 +44,8 @@ function MenuBanner(props) {
                         <ul className={styles.smallMenu}>
                             <li><Link to='/resources/pods' className={styles.link}>Pods</Link></li>
                             <li>Namespaces</li>
-                            <li>Volumes</li>
                             <li>Services</li>
-                            <li>Secrets</li>
+                            <li>Persistent Volume</li>
                         </ul>
                     </li>
 

@@ -1,0 +1,85 @@
+{
+    "name": "master.hwan.com",
+    "cpu_usage": 7,
+    "ram_usage": 31,
+    "disk_usage": 0,
+    "ip": "172.25.235.126",
+    "ready": "False",
+    "os_image": "Ubuntu 20.04.5 LTS",
+    "pods": [
+        {
+            "name": "kube-flannel-ds-97vct",
+            "namespace": "",
+            "pod_ip": "",
+            "status": "Running",
+            "service_connected": null,
+            "restarts": 0,
+            "image": "docker.io/rancher/mirrored-flannelcni-flannel:v0.20.2",
+            "age": "2023-01-18T13:52:06+09:00",
+            "process": {
+                "name": "",
+                "status": "",
+                "pid": 0,
+                "cpu_usage": 0,
+                "ram_usage": 0
+            }
+        },
+        {
+            "name": "kube-flannel-ds-97vct",
+            "namespace": "",
+            "pod_ip": "",
+            "status": "Running",
+            "service_connected": null,
+            "restarts": 0,
+            "image": "docker.io/rancher/mirrored-flannelcni-flannel:v0.20.2",
+            "age": "2023-01-18T13:52:06+09:00",
+            "process": {
+                "name": "",
+                "status": "",
+                "pid": 0,
+                "cpu_usage": 0,
+                "ram_usage": 0
+            }
+        },
+        {
+            "name": "kube-flannel-ds-97vct",
+            "namespace": "",
+            "pod_ip": "",
+            "status": "Running",
+            "service_connected": null,
+            "restarts": 0,
+            "image": "docker.io/rancher/mirrored-flannelcni-flannel:v0.20.2",
+            "age": "2023-01-18T13:52:06+09:00",
+            "process": {
+                "name": "",
+                "status": "",
+                "pid": 0,
+                "cpu_usage": 0,
+                "ram_usage": 0
+            }
+        }
+    ],
+    "record": {
+        "12hours": {
+            "name": "master.hwan.com",
+            "cpu_usage": 7,
+            "ram_usage": 31,
+            "disk_usage": 0,
+            "timestamp": "2023-02-07T21:12:33.412+09:00"
+        },
+        "24hours": {
+            "name": "master.hwan.com",
+            "cpu_usage": 7,
+            "ram_usage": 31,
+            "disk_usage": 0,
+            "timestamp": "2023-02-07T21:09:33.42+09:00"
+        },
+        "6hours": {
+            "name": "master.hwan.com",
+            "cpu_usage": 7,
+            "ram_usage": 31,
+            "disk_usage": 0,
+            "timestamp": "2023-02-07T21:15:33.501+09:00"
+        }
+    }
+}
