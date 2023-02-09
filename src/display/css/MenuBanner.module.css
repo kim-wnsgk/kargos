@@ -29,12 +29,10 @@
     font-size: 1.5em;
     font-weight: bold;
     list-style: none;
-    line-height: 80px;
+    line-height: 60px;
     text-align: center;
     cursor: pointer;
 }
-
-
 
 .smallMenu {
     height: 0;
