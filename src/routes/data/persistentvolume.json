@@ -1,0 +1,19 @@
+[
+    {
+        "name": "mysql-pv",
+        "capacity": {
+            "storage": "300Mi"
+        },
+        "access_modes": [
+            "ReadWriteOnce"
+        ],
+        "reclaim_policy": "Delete",
+        "status": "Bound",
+        "claim": "default/mysql-pvc",
+        "storage_class": "standard",
+        "reason": "",
+        "mount_option": null,
+        "labels": null,
+        "created": ""
+    }
+]

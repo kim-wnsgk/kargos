@@ -10,8 +10,13 @@ import Alerts from "./routes/Alerts.js";
 import Nodes from "./routes/Nodes.js";
 import NodesDetail from "./routes/NodesDetail.js";
 import Deployments from "./routes/Deployments.js";
-import DeploymentsDetail from "./routes/DeploymentsDetail.js";
 import Pods from "./routes/Pods.js";
+import PodsDetail from "./routes/PodsDetail.js";
+import Namespaces from "./routes/Namespaces.js";
+import NamespacesDetail from "./routes/NamespacesDetail.js";
+import Services from "./routes/Services.js";
+import ServicesDetail from "./routes/ServicesDetail.js";
+import PersistentVolume from "./routes/PersistentVolume.js";
 
 
 function App() {
@@ -25,8 +30,13 @@ function App() {
         <Route path="/nodes" element={<Nodes />} />
         <Route path="/nodes/detail/:name" element={<NodesDetail />} />
         <Route path="/controllers/deployments" element={<Deployments />} />
-        <Route path="/controllers/deployments/detail/:name" element={<DeploymentsDetail />} />
         <Route path="/resources/pods" element={<Pods />} />
+        <Route path="/resources/pods/detail/:name" element={<PodsDetail />} />
+        <Route path="/resources/namespaces" element={<Namespaces />} />
+        <Route path="/resources/namespaces/detail/:name" element={<NamespacesDetail />} />
+        <Route path="/resources/services" element={<Services />} />
+        <Route path="/resources/services/detail/:namespace/:name" element={<ServicesDetail />} />
+        <Route path="/resources/persistentvolume" element={<PersistentVolume />} />
       </Routes>
     </Router >
   );

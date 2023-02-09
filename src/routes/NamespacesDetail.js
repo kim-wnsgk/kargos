@@ -1,16 +1,15 @@
 import MenuBanner from '../display/MenuBanner.js'
 import TopBanner from '../display/TopBanner.js'
 import './css/Main.css'
-import styles from './css/NodesDetail.module.css'
-
+import styles from './css/NamespacesDetail.module.css'
 import MyChart from '../display/MyChart.js'
 
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 
-import jsonData from './data/nodesDetailData.json'
+import jsonData from './data/namespacesDetailData.json'
 
-function NodesDatail() {
+function NamespacesDetail() {
     const datas = {
         labels: ["CPU", "Max CPU"],
         datasets: [
@@ -33,7 +32,7 @@ function NodesDatail() {
         maxBarThickness: 100,    // bar 타입 막대의 최대 굵기
         layout: {
             padding: {
-                bottom: 150
+                bottom: 200
             }
         },
         plugins: {
@@ -96,7 +95,7 @@ function NodesDatail() {
         //     redirect: 'follow'
         // };
 
-        // fetch(`/node/detail/${name}`, requestOptions)
+        // fetch("/controllers/deployments/overview", requestOptions)
         //     .then(response => response.text())
         //     .then(result => console.log("data is : ", result))
         //     .catch(error => console.log('error', error));
@@ -108,48 +107,26 @@ function NodesDatail() {
 
     useEffect(() => {
         getData();
-
     }, [data]);
 
     return (
         <div class="container-fixed">
             <div className='menuBanner-fixed'>
-                <MenuBanner selected={["Nodes", "Detail"]} />
+                <MenuBanner selected={["Controllers", "Deployments", "Detail"]} />
             </div>
             <div className='contents-fixed'>
                 <div className='topBanner-fixed'>
-                    <TopBanner mainTitle="Node Information" subTitle="Kubernetes Node information" />
+                    <TopBanner mainTitle="Pod Information" subTitle="Kubernetes Pod Information" />
                 </div>
                 <div className={styles.contents}>
                     {data ? <div className={styles.box}>
                         <div className={styles.title}>{name}</div>
                         <div className={styles.chart}>
-                            <MyChart data={datas} options={options} />
+                            {/* <MyChart data={datas} options={options} /> */}
                         </div>
-                        <div className={styles.details}>OS Image: {data.os_image}</div>
-                        <div className={styles.details}>IP: {data.ip}</div>
+                        <div className={styles.details}>status: {data.status}</div>
+                        <div className={styles.details}>Created: {data.created}</div>
                         <div className={styles.pods}>
-                            <div className={styles.title}>Pods</div>
-                            <div>
-                                <div className={styles.row}>
-                                    <div className={styles.name}>Name</div>
-                                    <div className={styles.status}>Status</div>
-                                    <div className={styles.image}>Image</div>
-                                    <div className={styles.age}>Age</div>
-                                </div>
-                                {data.pods.map((pod, index) => {
-                                    return <div className={styles.row}>
-                                        <div className={styles.name}>{pod.name}</div>
-                                        {pod.status == "Running" ?
-                                            <div className={styles.status} style={{ color: 'green' }}>{pod.status}</div> :
-                                            <div className={styles.status} style={{ color: 'red' }}>{pod.status}</div>}
-
-                                        <div className={styles.image}>{pod.image}</div>
-                                        <div className={styles.age}>{pod.age}</div>
-                                    </div>
-                                }
-                                )}
-                            </div>
                         </div>
                     </div> : null}
 
@@ -160,4 +137,5 @@ function NodesDatail() {
         </div>
     );
 }
-export default NodesDatail;
+
+export default NamespacesDetail;

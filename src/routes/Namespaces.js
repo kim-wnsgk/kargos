@@ -1,16 +1,16 @@
 import MenuBanner from '../display/MenuBanner.js'
 import TopBanner from '../display/TopBanner.js'
 import './css/Main.css'
-import styles from './css/Pods.module.css'
+import styles from './css/Namespaces.module.css'
 
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { GrFormNext } from "react-icons/gr"
 
-import jsonData from './data/podsData.json'
+import jsonData from './data/namespacesData.json'
 
-function Pods() {
+function Namespaces() {
     const getData = () => {
         // var requestOptions = {
         //     method: 'GET',
@@ -40,7 +40,7 @@ function Pods() {
             </div>
             <div className='contents-fixed'>
                 <div className='topBanner-fixed'>
-                    <TopBanner mainTitle="Pods Information" subTitle="Kubernetes Pods Information" />
+                    <TopBanner mainTitle="Namespaces Information" subTitle="Kubernetes Namspaces Information" />
                 </div>
                 <div className={styles.contents}>
                     <select>
@@ -57,27 +57,27 @@ function Pods() {
 
                         <div className={styles.rows}>
                             <div className={styles.name}>Name</div>
-                            <div className={styles.namespace}>Namespace</div>
-                            <div className={styles.ip}>PodIP</div>
+                            <div className={styles.labels}>Labels</div>
                             <div className={styles.status}>Status</div>
-                            <div className={styles.conn}>Service Connected</div>
-                            <div className={styles.restarts}>Restarts</div>
+                            <div className={styles.cpu}>CPU Usage</div>
+                            <div className={styles.ram}>RAM Usage</div>
                         </div>
-                        {data.map((pod) => (
-                            <div className={styles.rows}>
-                                <div className={styles.name}>{pod.name}</div>
-                                <div className={styles.namespace}>{pod.namespace}</div>
-                                <div className={styles.ip}>{pod.pod_ip}</div>
-                                {pod.status == "running" ?
-                                    <div className={styles.status} style={{ color: 'green' }}>{pod.status}</div> :
-                                    <div className={styles.status} style={{ color: 'red' }}>{pod.status}</div>}
+                        {data.map((ns) => {
+                            console.log(ns.labels)
+                            return <div className={styles.rows}>
+                                <div className={styles.name}>{ns.name}</div>
+                                <div className={styles.labels}>{ns.labels ? Object.keys(ns.labels) : ".."}</div>
+                                {ns.status == "Active" ?
+                                    <div className={styles.status} style={{ color: 'green' }}>{ns.status}</div> :
+                                    <div className={styles.status} style={{ color: 'red' }}>{ns.status}</div>}
 
-                                <div className={styles.conn}>{pod.service_connected}</div>
-                                <div className={styles.restarts}>{pod.restarts}</div>
-                                <Link to={`/resources/pods/detail/${pod.name}`} className={styles.toDetail}><GrFormNext /></Link>
+                                <div className={styles.cpu}>{ns.cpu_usage ? ns.cpu_usage : ".."}</div>
+                                <div className={styles.ram}>{ns.ram_usage ? ns.ram_usage : ".."}</div>
+                                <Link to={`/resources/namespaces/detail/${ns.name}`} className={styles.toDetail}><GrFormNext /></Link>
 
                             </div>
-                        ))}
+                        }
+                        )}
                     </div>
 
                 </div>
@@ -86,4 +86,4 @@ function Pods() {
     );
 }
 
-export default Pods;
+export default Namespaces;

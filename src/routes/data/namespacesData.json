@@ -1,0 +1,63 @@
+[
+    {
+        "name": "default",
+        "labels": null,
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    },
+    {
+        "name": "ingress-nginx",
+        "labels": {
+            "app.kubernetes.io/instance": "ingress-nginx",
+            "app.kubernetes.io/name": "ingress-nginx"
+        },
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    },
+    {
+        "name": "kube-flannel",
+        "labels": {
+            "pod-security.kubernetes.io/enforce": "privileged"
+        },
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    },
+    {
+        "name": "kube-node-lease",
+        "labels": null,
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    },
+    {
+        "name": "kube-public",
+        "labels": null,
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    },
+    {
+        "name": "kube-system",
+        "labels": null,
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    },
+    {
+        "name": "kubernetes-dashboard",
+        "labels": null,
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    },
+    {
+        "name": "production",
+        "labels": null,
+        "status": "Active",
+        "cpu_usage": "",
+        "ram_usage": ""
+    }
+]

@@ -1,0 +1,48 @@
+{
+    "name": "Ubuntu",
+    "namespace": "test",
+    "node": "Node-01",
+    "status": "Ready",
+    "containers": [
+        {
+            "name": "Docker: 020312821984jsdfksfjdlajsdk023984ksdkjasd",
+            "image": "ubuntu/ubuntu:latest",
+            "processes": [
+                {
+                    "name": "sshd",
+                    "status": "running",
+                    "pid": "2467372",
+                    "cpu_usage": "100",
+                    "ram_usage": "200"
+                },
+                {
+                    "name": "gcc",
+                    "status": "running",
+                    "pid": "2467373",
+                    "cpu_usage": "100",
+                    "ram_usage": "200"
+                },
+                {
+                    "name": "java",
+                    "status": "running",
+                    "pid": "2467374",
+                    "cpu_usage": "100",
+                    "ram_usage": "200"
+                }
+            ]
+        },
+        {
+            "name": "Docker: easdwegerwergwergwe123123123",
+            "image": "nginx/nginx:latest",
+            "processes": [
+                {
+                    "name": "nginx",
+                    "status": "running",
+                    "pid": "2467372",
+                    "cpu_usage": "100",
+                    "ram_usage": "200"
+                }
+            ]
+        }
+    ]
+}

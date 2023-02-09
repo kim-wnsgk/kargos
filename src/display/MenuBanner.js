@@ -34,8 +34,9 @@ function MenuBanner(props) {
                     <li>
                         <div>Controller</div>
                         <ul className={styles.smallMenu}>
-                            <li><Link to='/controllers/deployments' className={styles.link}>Deployment</Link></li>
-                            <li>Ingress</li>
+                            <li><Link to='/controllers/deployments' className={styles.link}>Deployments</Link></li>
+                            <li><Link to='/controllers/ingress' className={styles.link}>Ingress</Link></li>
+                            <li>Jobs</li>
                             <li>DemonSets</li>
                         </ul>
                     </li>
@@ -43,9 +44,9 @@ function MenuBanner(props) {
                         <div>Resources</div>
                         <ul className={styles.smallMenu}>
                             <li><Link to='/resources/pods' className={styles.link}>Pods</Link></li>
-                            <li>Namespaces</li>
-                            <li>Services</li>
-                            <li>Persistent Volume</li>
+                            <li><Link to='/resources/namespaces' className={styles.link}>Namespaces</Link></li>
+                            <li><Link to='/resources/services' className={styles.link}>Services</Link></li>
+                            <li><Link to='/resources/persistentvolume' className={styles.link}>PersistenctVolume</Link></li>
                         </ul>
                     </li>
 

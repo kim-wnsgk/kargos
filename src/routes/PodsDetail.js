@@ -1,16 +1,15 @@
 import MenuBanner from '../display/MenuBanner.js'
 import TopBanner from '../display/TopBanner.js'
 import './css/Main.css'
-import styles from './css/NodesDetail.module.css'
-
+import styles from './css/PodsDetail.module.css'
 import MyChart from '../display/MyChart.js'
 
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 
-import jsonData from './data/nodesDetailData.json'
+import jsonData from './data/podDetailData.json'
 
-function NodesDatail() {
+function PodsDetail() {
     const datas = {
         labels: ["CPU", "Max CPU"],
         datasets: [
@@ -33,7 +32,7 @@ function NodesDatail() {
         maxBarThickness: 100,    // bar 타입 막대의 최대 굵기
         layout: {
             padding: {
-                bottom: 150
+                bottom: 200
             }
         },
         plugins: {
@@ -96,7 +95,7 @@ function NodesDatail() {
         //     redirect: 'follow'
         // };
 
-        // fetch(`/node/detail/${name}`, requestOptions)
+        // fetch("/controllers/deployments/overview", requestOptions)
         //     .then(response => response.text())
         //     .then(result => console.log("data is : ", result))
         //     .catch(error => console.log('error', error));
@@ -108,17 +107,16 @@ function NodesDatail() {
 
     useEffect(() => {
         getData();
-
     }, [data]);
 
     return (
         <div class="container-fixed">
             <div className='menuBanner-fixed'>
-                <MenuBanner selected={["Nodes", "Detail"]} />
+                <MenuBanner selected={["Controllers", "Deployments", "Detail"]} />
             </div>
             <div className='contents-fixed'>
                 <div className='topBanner-fixed'>
-                    <TopBanner mainTitle="Node Information" subTitle="Kubernetes Node information" />
+                    <TopBanner mainTitle="Pod Information" subTitle="Kubernetes Pod Information" />
                 </div>
                 <div className={styles.contents}>
                     {data ? <div className={styles.box}>
@@ -126,11 +124,40 @@ function NodesDatail() {
                         <div className={styles.chart}>
                             <MyChart data={datas} options={options} />
                         </div>
-                        <div className={styles.details}>OS Image: {data.os_image}</div>
-                        <div className={styles.details}>IP: {data.ip}</div>
+                        <div className={styles.details}>Node: {data.node}</div>
+                        <div className={styles.details}>Namespace: {data.namespace}</div>
                         <div className={styles.pods}>
-                            <div className={styles.title}>Pods</div>
-                            <div>
+                            {data.containers ?
+                                data.containers.map((container) =>
+                                    <div>
+                                        <div className={styles.title}>{container.name}</div>
+                                        <div className={styles.subtitle}>Image: {container.image}</div>
+
+                                        <div>
+                                            <div className={styles.row}>
+                                                <div className={styles.name}>Name</div>
+                                                <div className={styles.status}>Status</div>
+                                                <div className={styles.pid}>PID</div>
+                                                <div className={styles.cpu}>CPU Usage</div>
+                                                <div className={styles.ram}>RAM Usage</div>
+                                            </div>
+                                            {container.processes ?
+                                                container.processes.map((ps) =>
+                                                    <div className={styles.row}>
+                                                        <div className={styles.name}>{ps.name}</div>
+                                                        {ps.status == "running" ?
+                                                            <div className={styles.status} style={{ color: 'green' }}>{ps.status}</div> :
+                                                            <div className={styles.status} style={{ color: 'red' }}>{ps.status}</div>}
+
+                                                        <div className={styles.pid}>{ps.pid}</div>
+                                                        <div className={styles.cpu}>{ps.cpu_usage}mi</div>
+                                                        <div className={styles.ram}>{ps.ram_usage}mb</div>
+                                                    </div>)
+                                                : null}
+                                        </div>
+                                    </div>)
+                                : null}
+                            {/* <div>
                                 <div className={styles.row}>
                                     <div className={styles.name}>Name</div>
                                     <div className={styles.status}>Status</div>
@@ -149,7 +176,7 @@ function NodesDatail() {
                                     </div>
                                 }
                                 )}
-                            </div>
+                            </div> */}
                         </div>
                     </div> : null}
 
@@ -160,4 +187,5 @@ function NodesDatail() {
         </div>
     );
 }
-export default NodesDatail;
+
+export default PodsDetail;

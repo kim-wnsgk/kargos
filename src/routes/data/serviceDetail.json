@@ -1,0 +1,15 @@
+{
+    "name": "backend-service",
+    "namespace": "default",
+    "Type": "LoadBalancer",
+    "cluster_ip": "10.111.65.127",
+    "external_ip": "",
+    "port": 9000,
+    "node_port": 30891,
+    "selector": {
+        "app": "backend"
+    },
+    "conditions": null,
+    "annotations": null,
+    "created": "2023-01-31 22:05:16 +0900 KST"
+}
