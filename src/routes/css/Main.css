@@ -18,6 +18,9 @@
     flex-direction: column;
 }
 
+.topBanner-fixed{
+    height:150px;
+}
 /* .button {
     position: absolute;
     left: 250px;

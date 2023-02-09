@@ -20,6 +20,10 @@
     color: rgb(214, 214, 214);
 }
 
+.menuBar {
+    height: 100%;
+}
+
 .menuList {
     padding-left: 0;
 }
@@ -30,6 +34,7 @@
     font-weight: bold;
     list-style: none;
     line-height: 60px;
+    /* 추후 수정*/
     text-align: center;
     cursor: pointer;
 }
